@@ -1,0 +1,89 @@
+<h3 id='request'>Request</h3>
+
+<ul>
+<li>The headers must include a <strong>valid authentication token</strong>.</li>
+
+<li>Optional parameters (see below)</li>
+</ul>
+
+<h3 id='response'>Response</h3>
+
+<p><code>Status: 200 OK</code> Returns a collection of <a href='#facility-resource'>facilities</a></p>
+
+<p>For errors responses, see the <a href='#http-response-codes'>response status codes documentation</a>.</p>
+
+<h3 id='parameters'>Parameters</h3>
+
+<ul>
+<li><code>allProperties</code> - boolean field (default true) specifying that all the core and extended properties should be returned.</li>
+</ul>
+
+<p><code>/facilities.json?allProperties={true/false}</code></p>
+
+<p>SORTING</p>
+
+<ul>
+<li><code>sortAsc</code> - Sort ascending</li>
+
+<li><code>sortDesc</code> - Sort descending</li>
+</ul>
+
+<p><code>/facilities.json?sortAsc={property1}</code></p>
+
+<p>Sorting is currently limited to one field</p>
+
+<p>PAGINATION</p>
+
+<ul>
+<li><code>limit</code> - Number of records to return in a result. Default = 25</li>
+
+<li><code>offset</code> - Offset of the search result. Default = 0</li>
+
+<li><code>limit=off</code> - Disables pagination. Pagination on by default.</li>
+</ul>
+
+<p><code>/facilities.json?limit=25&amp;offset=50</code></p>
+
+<p>PARTIAL RESPONSE</p>
+
+<ul>
+<li><code>fields</code> - specifies which fields should be returned in the response.</li>
+</ul>
+
+<p><code>/facilities.json?fields=name,id,properties:numBeds</code></p>
+
+<p>This would return just the specified properties of name, id and numBeds (in the properties sub-object) in a partial response. This is very helpful in optimizing performance in bandwidth constrained settings. All properties in the facility registry are accessible by this method including the core properties and those in the property sub-object.</p>
+
+<p>FILTERING FACILITIES</p>
+
+<ul>
+<li><code>{propertyName}</code> - name of the property you want to filter by</li>
+</ul>
+
+<p><code>/facilities.json?{propertyName}={filterValue}</code></p>
+
+<ul>
+<li>Supports only exact matches of the filter value</li>
+
+<li>One value per instance of parameter</li>
+
+<li>Name of a parameter must exactly match the name of the property (core or extended) on which it filters data</li>
+
+<li>Instances of the same parameter are OR and different are AND. For example: ?properties.services=OBG&amp;properties.services=ER would filter all facilities offering OBG OR ER, where as ?identifiers.id=2030&amp;identifiers.agency=MOH would filter facilities with an identifier 2030 AND identifier assigned by MOH.</li>
+</ul>
+
+<p>FILTER BY ACTIVE STATUS</p>
+
+<ul>
+<li><code>active</code> - filter facilities based on whether they are active or not.</li>
+</ul>
+
+<p><code>/facilities.json?active={true/false}</code></p>
+
+<p>FILTER BY UPDATED SINCE</p>
+
+<ul>
+<li><code>updatedSince</code> - return facilities updated since a particular date expressed in ISO 8601 format.</li>
+</ul>
+
+<p><code>/facilities.json?updatedSince=2011-11-16T00:00:00Z</code></p>

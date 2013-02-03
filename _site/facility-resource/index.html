@@ -1,0 +1,186 @@
+<p>The API exposes a representation of the health facilities in JSON.</p>
+
+<p>EXAMPLE HEALTH FACILITY RESPONSE</p>
+
+<p><code>{
+    &quot;facilities&quot;: {
+        &quot;facility&quot;: {
+            &quot;name&quot;: &quot;Kakamega HC&quot;,
+            &quot;url&quot;: &quot;http: //facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json&quot;,
+            &quot;id&quot;: &quot;0X9OCW3JMV98EYOVN32SGN4II&quot;,
+            &quot;active&quot;: true,
+            &quot;createdAt&quot;: &quot;2011-11-16T14:26:15Z&quot;,
+            &quot;updatedAt&quot;: &quot;2011-11-16T14:26:15Z&quot;,
+            &quot;coordinates&quot;: [
+                -1.6917,
+                29.525
+            ],
+            &quot;identifiers&quot;: [
+                {
+                    &quot;agency&quot;: &quot;MOH&quot;,
+                    &quot;context&quot;: &quot;DHIS&quot;,
+                    &quot;id&quot;: &quot;123&quot;
+                },
+                {
+                    &quot;agency&quot;: &quot;UNICEF&quot;,
+                    &quot;context&quot;: &quot;mtrac&quot;,
+                    &quot;id&quot;: &quot;53adf&quot;
+                }
+            ],
+            &quot;properties&quot;: {
+                &quot;numBeds&quot;: 55,
+                &quot;services&quot;: [
+                    &quot;XR&quot;,
+                    &quot;OBG&quot;,
+                    &quot;TR&quot;
+                ],
+                &quot;equipment&quot;: [
+                    {
+                        &quot;id&quot;: 542,
+                        &quot;name&quot;: &quot;Microscope&quot;
+                    },
+                    {
+                        &quot;id&quot;: 942,
+                        &quot;name&quot;: &quot;Vaccine Fridge&quot;
+                    }
+                ],
+                &quot;manager&quot;: &quot;Mrs. Liz&quot;,
+                &quot;hasMaternity&quot;: true,
+                &quot;medicalOfficer&quot;: &quot;Dr.Mukombo&quot;
+            }
+        }
+    }
+}</code></p>
+
+<h3 id='core_properties'>Core Properties</h3>
+
+<p>Each facility must contain the following core properties.</p>
+
+<ul>
+<li><code>name</code> - Name of the facility.</li>
+</ul>
+
+<p><code>name: &quot;Kakamega HC&quot;</code></p>
+
+<ul>
+<li><code>id</code> - The internal system unique identifier. The id most be universally unique within the FRED registry.</li>
+</ul>
+
+<p><code>id: &#39;0X9OCW3JMV98EYOVN32SGN4II&#39;</code></p>
+
+<p>Note: the API does not providing a specific format for IDs. That is left up to the implementation.</p>
+
+<ul>
+<li><code>url</code> - URL link to the unique ID API resource for the facility</li>
+</ul>
+
+<p><code>url: &quot;http://facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json&quot;</code></p>
+
+<p>FACILITY IDENTIFIERS</p>
+
+<p>One of the primary functions of the facility registry is facilitate a mapping of the different IDs used by different agencies to represent a particular facility.</p>
+
+<p>Each external identifier consists of the following components:</p>
+
+<p>agency: agency who created the code. ex) ministry of health, UNICEF, etc. context: context/external system in which the agency is using the ID. eg) HMIS, DHIS2, HR id: unique identifier</p>
+
+<p><code>identifiers : [
+      {agency: &quot;MOH&quot;, context: &quot;DHIS&quot;, id: &quot;123&quot;},
+      {agency: &quot;UNICEF&quot;, context: &quot;mtrac&quot;, id: &quot;53adf&quot;},
+      { .... }
+]</code></p>
+
+<ul>
+<li><code>coordinates</code> - Geolocation represented by longitude and latitude coordinates in that order. All coordinates assume as WSG84 projection.</li>
+</ul>
+
+<p><code>coordinates: [lng, lat]</code></p>
+
+<ul>
+<li><code>active</code> - indicates whether the facility is active or not.</li>
+</ul>
+
+<p><code>active: {true/false}</code></p>
+
+<ul>
+<li><code>createdAt</code> - ISO 8601 timestamp of when the facility was created.</li>
+</ul>
+
+<p><code>createdAt: &quot;2011-11-16T14:26:15Z&quot;</code></p>
+
+<ul>
+<li><code>updatedAt</code> - ISO 8601 timestamp of when the facility was last updated.</li>
+</ul>
+
+<p><code>updatedAt: &quot;2011-11-18T16:26:15Z&quot;</code></p>
+
+<h3 id='extended_properties'>Extended Properties</h3>
+
+<p>Extended properties are implementation specific properties in the properties block.</p>
+
+<p>The property types that are supported are:</p>
+
+<ul>
+<li>
+<p>String – A series of textual characters</p>
+</li>
+
+<li>
+<p>Integer – A whole number</p>
+</li>
+
+<li>
+<p>Decimal</p>
+</li>
+
+<li>
+<p>Boolean – A true or false value</p>
+</li>
+
+<li>
+<p>Date: ISO 8601 format. eg) 2012-12-16T18:22:20Z</p>
+</li>
+
+<li>
+<p>Lists - A list of one of the following data types</p>
+
+<ul>
+<li>Simple data types such as the code mnemonic of selected value(s) (example: “apple”,”orange”)</li>
+
+<li>Implementation specific complex data</li>
+</ul>
+</li>
+</ul>
+
+<p>SAMPLE PROPERTIES</p>
+
+<p><code>&quot;properties&quot;: {
+    &quot;numBeds&quot;: 55,
+    &quot;services&quot;: [&quot;XR&quot;,&quot;OBG&quot;,&quot;TR&quot;],
+    &quot;equipment&quot;: [
+        {
+            &quot;id&quot;: 542,
+            &quot;name&quot;: &quot;Microscope&quot;
+        },
+        {
+            &quot;id&quot;: 942,
+            &quot;name&quot;: &quot;Vaccine Fridge&quot;
+        }
+    ],
+    &quot;manager&quot;: &quot;Mrs. Liz&quot;
+    &quot;hasMaternity&quot;: true,
+},</code></p>
+
+<p>Property field specification expectations</p>
+
+<ul>
+<li>For each property field, the implementer specifies a stable code that should not be changed once defined. The implementation should warn the user if they attempt to modify the code.</li>
+
+<li>The property field code should consist only of letters and number and not any special characters, spaces or punctuation to allow them to represent a good xml element. The API does not specify whether to define properties using camelCasing or lower_case, however, we encourage the implementation to be consistent in their formating.</li>
+
+<li>Each property field should be unique</li>
+
+<li>Specific properties for attachments and images are not supported in this version. It is possible to use a text string to represent a file path but that is implementation specific</li>
+
+<li>Properties should follow the camelCasing naming convention</li>
+</ul>

@@ -1,0 +1,48 @@
+<h3 id='http_status_codes'>HTTP Status Codes</h3>
+
+<ul>
+<li><code>200 OK</code> - All Indicates that the specified action was successfully completed. A 200 response indicates that the registry did successfully perform the operation and the response contains the final result of the action.</li>
+
+<li><code>201 Created</code> - Indicates that a request was successful and as a result, a resource has been created</li>
+
+<li><code>401 Unauthorized</code> - Raised when the client attempts to perform an operation against a resource which requires authorization. This error code indicates a challenge for client credentials.</li>
+
+<li><code>403 Forbidden</code> - Indicates that the client does not have the necessary permission to perform the specified operation against the requested resource.</li>
+
+<li><code>404 Not Found</code> - Indicates that a resource was not found or is not available.</li>
+
+<li><code>405 Not Allowed</code> - Indicates that the requested operation is not allowed on the current resource (for example: DELETE on a collection)</li>
+
+<li><code>409 Conflict</code> - Indicates that the facility registry has detected a conflict in the operation and has refused to perform the operation.</li>
+
+<li><code>410 Gone</code> - Indicates that a resource did exist but has been permanently removed.</li>
+
+<li><code>500 Internal Server Error</code> - Indicates that the server encountered an error while attempting to execute the desired action.</li>
+</ul>
+
+<h3 id='success'>Success</h3>
+
+<p>Success differ from errors in that their body may not be a simple response object with a code and a message. The headers however are consistent across all calls:</p>
+
+<ul>
+<li><code>GET</code>, <code>PUT</code>, <code>DELETE</code> returns <code>200 OK</code> on success,</li>
+
+<li><code>POST </code> returns <code>201 Created</code> on success,</li>
+</ul>
+
+<h3 id='error'>Error</h3>
+
+<p>Error responses are simply returning <a href='http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html'>standard HTTP error codes</a> along with some additional information:</p>
+
+<ul>
+<li>The error code is sent back as a status header,</li>
+
+<li>The body includes an object describing both the code and message (for debugging and/or display purposes),</li>
+</ul>
+
+<p>For example, for a call with when the resource is not found:</p>
+
+<p><code>Status: 404 Not Found</code> <code>{
+    code: 404,
+    message: &#39;Not Found: resource not found&#39;
+}</code></p>

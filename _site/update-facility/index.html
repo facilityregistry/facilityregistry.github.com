@@ -1,0 +1,30 @@
+<p>Update the facility, replacing the facility properties with the new resource representation passed in the request.</p>
+
+<h3 id='request'>Request</h3>
+
+<ul>
+<li>The headers must include a <strong>valid authentication token</strong>.</li>
+
+<li>Full new resource representation of the facility (not a partial update)</li>
+
+<li><strong>The body can&#8217;t be empty</strong> and must include at least the name attribute, a <code>string</code> that will be used as the name of the facility.</li>
+</ul>
+
+<p><code>Authentication: AUTHENTICATION TOKEN</code> <code>{
+    name: &#39;Kakamega HCII&#39;
+}</code></p>
+
+<h3 id='response'>Response</h3>
+
+<p><strong>If succeeds</strong>, returns the location of the updated facility.</p>
+
+<p><code>Status: 200 OK
+Location: http: //facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json</code></p>
+
+<p>If the the facility resource is not found to update</p>
+
+<p><code>Status: 404 Not Found</code></p>
+
+<p>For errors responses, see the <a href='#response-status-codes'>response status codes documentation</a>.</p>
+
+<p>Question - Can the id be changed in a PUT?</p>

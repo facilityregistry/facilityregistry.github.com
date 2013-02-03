@@ -1,0 +1,7 @@
+{
+    "name": "Facility Registry API",
+    "description": "Facility Registry API",
+	"version": "1.0",
+    "local": ["boot"],
+    "paths": ["lib"]
+}
