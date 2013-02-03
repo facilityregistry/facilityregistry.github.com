@@ -1,6 +1,6 @@
 ---
 category: 'Facilities'
-title: 'Resource Object'
+title: 'Facility Object'
 ---
 
 The API exposes a representation of the health facilities in JSON.
