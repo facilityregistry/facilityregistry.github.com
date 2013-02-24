@@ -8,8 +8,8 @@ The API exposes a representation of the health facilities in JSON.
 EXAMPLE HEALTH FACILITY RESPONSE
 
 ```{
-    "facilities": {
-        "facility": {
+    "facilities": [
+        {
             "name": "Kakamega HC",
             "url": "http: //facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json",
             "id": "0X9OCW3JMV98EYOVN32SGN4II",
@@ -54,7 +54,7 @@ EXAMPLE HEALTH FACILITY RESPONSE
                 "medicalOfficer": "Dr.Mukombo"
             }
         }
-    }
+    ]
 }```
 
 ###Core Properties###
