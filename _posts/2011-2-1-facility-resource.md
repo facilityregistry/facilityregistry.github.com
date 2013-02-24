@@ -86,8 +86,8 @@ context: context/external system in which the agency is using the ID. eg) HMIS, 
 id: unique identifier
 
 ```identifiers : [
-      {agency: "MOH", context: "DHIS", id: "123"},
-      {agency: "UNICEF", context: "mtrac", id: "53adf"},
+      {"agency": "MOH", "context": "DHIS", "id": "123"},
+      {"agency": "UNICEF", "context": "mtrac", "id": "53adf"},
       { .... }
 ]```
 
