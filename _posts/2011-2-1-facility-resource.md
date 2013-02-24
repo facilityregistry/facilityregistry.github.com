@@ -59,13 +59,13 @@ EXAMPLE HEALTH FACILITY RESPONSE
 
 ###Core Properties###
 
-Each facility must contain the following core properties.
+Each facility has the following core properties:
 
 * `name` - Name of the facility.
 
 `name: "Kakamega HC"`
 
-* `id` - The internal system unique identifier. The id most be universally unique within the FRED registry.
+* `id` - The internal system unique identifier. The id must be universally unique within the FRED registry.
 
 `id: '0X9OCW3JMV98EYOVN32SGN4II'`
 
@@ -77,7 +77,7 @@ Note: the API does not providing a specific format for IDs. That is left up to t
 
 FACILITY IDENTIFIERS
 
-One of the primary functions of the facility registry is facilitate a mapping of the different IDs used by different agencies to represent a particular facility.
+One of the primary functions of the facility registry is to facilitate a mapping of the different IDs used by different agencies to represent a particular facility.
 
 Each external identifier consists of the following components:
 
@@ -99,11 +99,11 @@ id: unique identifier
 
 `active: {true/false}`
 
-* `createdAt` - ISO 8601 timestamp of when the facility was created.
+* `createdAt` - ISO 8601 timestamp of when the facility was created in the registry.
 
 `createdAt: "2011-11-16T14:26:15Z"`
 
-* `updatedAt` - ISO 8601 timestamp of when the facility was last updated.
+* `updatedAt` - ISO 8601 timestamp of when the facility was last updated in the registry.
 
 `updatedAt: "2011-11-18T16:26:15Z"`
 
