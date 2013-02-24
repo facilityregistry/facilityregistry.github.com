@@ -10,16 +10,25 @@ layout: nil
 Get an individual facility for a particular id.
 
 ### Request
-
-* The headers must include a **valid authentication token**.
+* **`{id}`** of the facility
 
 ### Response
 
 ```Status: 200 OK```
 
-Returns the [facility object](#facility-resource)
+`{
+   "facility": {
+   "name": "Kakamega HC",
+   ...
+}`
 
-`Status: 404 Not Found`
+Returns the [facility object](#facility-resource) matching **`{id}`**
+
+```Status: 404 Not Found```
+```{
+    code: 404 Not Found,
+    message: 'Resource not found'
+}```
 
 Facility resource not found or unavailable
 

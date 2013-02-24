@@ -396,10 +396,13 @@ table {
 }
 
 
-.sticked {
-  position: fixed !important;
-}
+
 /* GENERAL */
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: #fff;
 }
@@ -407,7 +410,7 @@ body {
 body,
 input,
 textarea {
-  color: #333f45;
+  color: #191919;
   font: 14px/140% 'Open Sans', Arial, sans-serif;
 }
 
@@ -433,6 +436,7 @@ code {
 code {
   font-family: 'Monaco', monospace, sans-serif;
 }
+
 
 /* HEADER */
 #header {
@@ -466,167 +470,219 @@ code {
   color: #fff;
 }
 
-/* CONTENT */
-
-/* Links */
-#links {
+/* SIDEBAR */
+#sidebar {
+  background: #f4d5d2
+  color: #fff;
+  float: left;  
   height: 100%;
-  padding: 20px;
-  float: left;
+  overflow: auto;
+  position: fixed;
   top: 0;
-  width: 200px;
+  width: 240px;
 }
 
-#links h2 {
+#sidebar version {
+	padding-left: 40px;
+	background: #ccc;
+}
+
+#sidebar h1 {
+  background: #cc4036;
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+#sidebar h2 {
+  color: #333;
   font-size: 16px;
   margin: 0;
 }
 
-#links ul {
+#sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#links ul ul {
+#sidebar ul#links {
+  padding: 20px;
+}
+
+#sidebar ul ul {
   padding-left: 20px;
 }
 
-#links ul li a {
+#sidebar ul li a {
+  color: #119bdf;
   display: block;
   padding: 0 0 15px;
 }
-#links ul li a:active,
-#links ul li a.active {
+#sidebar ul li a:active,
+#sidebar ul li a.active {
   text-decoration: underline;
 }
 
-/* References */
-#references {
-  padding: 20px;
-  padding-left: 260px;
-  max-width: 900px;
+#sidebar input {
+  background: #ccc;
+  border: 0;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.2);
+  color: #4b4b4b;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+#sidebar input:active,
+#sidebar input:focus {
+  border-color: #ccc;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
-#references article {
+
+
+/* References */
+#content {
+  padding: 20px;
+  padding-left: 260px;
+  max-width: 800px;
+}
+
+#content .control {
+  cursor: pointer;
+
+  font-weight: bold;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  float: right;
+}
+
+#content article {
+  clear: both;
+  margin: 15px 0;
   border: 1px solid #ddd;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  margin-bottom: 15px;
 }
 
-#references article > a {
+#content article > a {
   background: #eef1f2;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   cursor: pointer;
   display: block;
   padding: 15px;
 }
-#references article > a:hover {
-  background: #fff;
+#content article > a:hover {
+  background: #ddd;
   text-decoration: none;
 }
 
-#references a h2 {
+#content a h2 {
   color: #333;
   font-size: 16px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
   margin: 0;
-  text-align: right;
 }
 
-#references a h2 code {
-  float: left;
+#content a h2 code {
+  float: right;
+  font-size: 14px;
 }
 
-#references a h2 code b {
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+#content a h2 code b {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   color: #fff;
   font-weight: normal;
   padding: 3px 6px;
 }
 
 /* Default */
-#references article {
+#content article {
   border-color: #e2e7ea;
 }
 
-#references article a h2 code {
+#content article a h2 code {
   color: #657e8b;
 }
 
-#references article a h2 code b {
+#content article a h2 code b {
   background: #657e8b;
   text-transform: uppercase;
 }
 
 /* GET */
-#references article.GET a h2 code {
+#content article.GET a h2 code {
   color: #119bdf;
 }
 
-/* GET */
-#references article.GET a h4 code {
-  color: #119bdf;
-}
-
-#references article.GET a h2 code b {
-  background: #119bdf;
-}
-
-#references article.GET a h4 code b {
+#content article.GET a h2 code b {
   background: #119bdf;
 }
 
 /* POST */
-#references article.POST a h2 code {
+#content article.POST a h2 code {
   color: #52ce0e;
 }
 
-#references article.POST a h2 code b {
+#content article.POST a h2 code b {
   background: #52ce0e;
 }
 
 /* PUT */
-#references article.PUT a h2 code {
+#content article.PUT a h2 code {
   color: #e08f10;
 }
 
-#references article.PUT a h2 code b {
+#content article.PUT a h2 code b {
   background: #e08f10;
 }
 
 /* DELETE */
-#references article.DELETE a h2 code {
+#content article.DELETE a h2 code {
   color: #e02a10;
 }
 
-#references article.DELETE a h2 code b {
+#content article.DELETE a h2 code b {
   background: #e02a10;
 }
 
 /* Reference's body */
-#references h3 {
-  text-transform: uppercase;
+#content h3 {
 }
 
-#references .body {
+#content .body {
+  border-top: 1px solid #eef1f2;
   display: block;
-  padding: 15px 20px;
+  padding: 15px 15px 0;
 }
 
-#references .body code {
+#content .body code {
   border: 1px solid #e2e7ea;
-  background: #eef1f2;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  background: #f4f4ff;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   color: #546974;
-  padding: 0 1px;
+  padding: 0 0px;
 }
 
-#references .body p > code {
+#content .body p > code {
   display: block;
   padding: 15px;
   white-space: pre;

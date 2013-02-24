@@ -6,20 +6,7 @@ type: 'GET'
 
 layout: nil
 ---
-### Request
-
-* The headers must include a **valid authentication token**.
-* Optional parameters (see below)
-
-### Response
-
-```Status: 200 OK```
-Returns a collection of [facilities](#facility-resource)
-
-For errors responses, see the [response status codes documentation](#http-response-codes).
-
-
-###Parameters###
+###Request Parameters###
 
 * `allProperties` - boolean field (default true) specifying that all the core and extended properties should be returned.
 
@@ -74,3 +61,10 @@ FILTER BY UPDATED SINCE
 * `updatedSince` - return facilities updated since a particular date expressed in ISO 8601 format.
 
 `/facilities.json?updatedSince=2011-11-16T00:00:00Z`
+
+### Response
+
+```Status: 200 OK```
+Returns a collection of [facilities](#facility-resource)
+
+For errors responses, see the [response status codes documentation](#http-response-codes).

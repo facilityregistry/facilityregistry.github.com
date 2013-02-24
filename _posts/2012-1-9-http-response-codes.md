@@ -34,6 +34,6 @@ For example, for a call with when the resource is not found:
 
 ```Status: 404 Not Found```
 ```{
-    code: 404,
-    message: 'Not Found: resource not found'
+    code: 404 Not Found,
+    message: 'Resource not found'
 }```

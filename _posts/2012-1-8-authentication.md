@@ -4,7 +4,7 @@ title: 'Authentication'
 layout: nil
 ---
 
-Authentication is handled by [HTTP Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication/).
+Authentication is handled by [HTTP Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication).
 
 Every API request must include a **valid authentication token** in the header.
 

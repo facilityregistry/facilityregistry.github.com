@@ -1,5 +1,4 @@
 <h1>{{ site.title }} &nbsp;<i class="icon-plus-sign-alt icon-large"></i></h1>
-
 <ul id='links'>
   {% for post in site.posts %}
     {% if post.category == null %}

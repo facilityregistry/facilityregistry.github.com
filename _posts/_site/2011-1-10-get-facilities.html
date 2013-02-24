@@ -1,4 +1,18 @@
-<h3 id='request_parameters'>Request Parameters</h3>
+<h3 id='request'>Request</h3>
+
+<ul>
+<li>The headers must include a <strong>valid authentication token</strong>.</li>
+
+<li>Optional parameters (see below)</li>
+</ul>
+
+<h3 id='response'>Response</h3>
+
+<p><code>Status: 200 OK</code> Returns a collection of <a href='#facility-resource'>facilities</a></p>
+
+<p>For errors responses, see the <a href='#http-response-codes'>response status codes documentation</a>.</p>
+
+<h3 id='parameters'>Parameters</h3>
 
 <ul>
 <li><code>allProperties</code> - boolean field (default true) specifying that all the core and extended properties should be returned.</li>
@@ -73,9 +87,3 @@
 </ul>
 
 <p><code>/facilities.json?updatedSince=2011-11-16T00:00:00Z</code></p>
-
-<h3 id='response'>Response</h3>
-
-<p><code>Status: 200 OK</code> Returns a collection of <a href='#facility-resource'>facilities</a></p>
-
-<p>For errors responses, see the <a href='#http-response-codes'>response status codes documentation</a>.</p>

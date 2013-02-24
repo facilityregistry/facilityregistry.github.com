@@ -3,16 +3,25 @@
 <h3 id='request'>Request</h3>
 
 <ul>
-<li>The headers must include a <strong>valid authentication token</strong>.</li>
+<li><strong><code>{id}</code></strong> of the facility</li>
 </ul>
 
 <h3 id='response'>Response</h3>
 
 <p><code>Status: 200 OK</code></p>
 
-<p>Returns the <a href='#facility-resource'>facility object</a></p>
+<p><code>{
+   &quot;facility&quot;: {
+   &quot;name&quot;: &quot;Kakamega HC&quot;,
+   ...
+}</code></p>
 
-<p><code>Status: 404 Not Found</code></p>
+<p>Returns the <a href='#facility-resource'>facility object</a> matching <strong><code>{id}</code></strong></p>
+
+<p><code>Status: 404 Not Found</code> <code>{
+    code: 404 Not Found,
+    message: &#39;Resource not found&#39;
+}</code></p>
 
 <p>Facility resource not found or unavailable</p>
 
