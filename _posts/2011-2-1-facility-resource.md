@@ -148,4 +148,3 @@ Property field specification expectations
 * The property field code should consist only of letters and number and not any special characters, spaces or punctuation to allow them to represent a good xml element. The API does not specify whether to define properties using camelCasing or lower_case, however, we encourage the implementation to be consistent in their formating.
 * Each property field should be unique
 * Specific properties for attachments and images are not supported in this version. It is possible to use a text string to represent a file path but that is implementation specific
-* Properties should follow the camelCasing naming convention
