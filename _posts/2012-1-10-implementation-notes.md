@@ -9,5 +9,5 @@ layout: nil
 
 RECOMMENDED PRACTICES
 
-* While it is not required, we suggest implementations support gzip, etags and cache headers which can help reduce uncessary data transfer which is helpful in low-bandwidth environments.
+* While it is not required, we suggest implementations support gzip, etags and cache headers which can help reduce unnecessary data transfer which is helpful in low-bandwidth environments.
 * Cache headers if implemented could be especially useful, as a common use case seems to be maintaining a mirror of facility information.
