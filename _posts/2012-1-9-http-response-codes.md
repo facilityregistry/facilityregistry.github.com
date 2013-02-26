@@ -8,6 +8,7 @@ layout: nil
 
 * `200 OK` - All Indicates that the specified action was successfully completed. A 200 response indicates that the registry did successfully perform the operation and the response contains the final result of the action.
 * `201 Created` - Indicates that a request was successful and as a result, a resource has been created
+* `400 Bad Request` - Indicates that the requested operation is not valid.
 * `401 Unauthorized` - Raised when the client attempts to perform an operation against a resource which requires authorization. This error code indicates a challenge for client credentials.
 * `403 Forbidden` - Indicates that the client does not have the necessary permission to perform the specified operation against the requested resource.
 * `404 Not Found` - Indicates that a resource was not found or is not available.

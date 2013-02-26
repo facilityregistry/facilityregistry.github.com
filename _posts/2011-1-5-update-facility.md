@@ -13,6 +13,7 @@ Update the facility, replacing the facility properties with the new resource rep
 
 * Full new resource representation of the facility (not a partial update)
 * **The body can't be empty** and must include at least the name attribute, a `string` that will be used as the name of the facility.
+* The `id`, `url`, `createdAt`, and `updatedAt` core properties cannot be changed by the client.  An update request including any of these properties or any unknown core properties should result in a `400 Bad Request` error.
 
 ```{
     name: 'Kakamega HCII'
@@ -44,5 +45,3 @@ If the the facility resource is not found to update
 }```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).
-
-Question - Can the id be changed in a PUT?
