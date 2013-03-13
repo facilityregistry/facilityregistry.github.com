@@ -6,8 +6,8 @@
     &quot;facilities&quot;: [
         {
             &quot;name&quot;: &quot;Kakamega HC&quot;,
-            &quot;href&quot;: &quot;http://facilityregistry.org/api/v1/facilities/53adf.json&quot;,
-            &quot;uuid&quot;: &quot;550e8400-e29b-41d4-a716-446655440000&quot;,
+            &quot;href&quot;: &quot;http://facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json&quot;,
+            &quot;id&quot;: &quot;0X9OCW3JMV98EYOVN32SGN4II&quot;,
             &quot;active&quot;: true,
             &quot;createdAt&quot;: &quot;2011-11-16T14:26:15Z&quot;,
             &quot;updatedAt&quot;: &quot;2011-11-16T14:26:15Z&quot;,
@@ -63,18 +63,18 @@
 <p><code>&quot;name&quot;: &quot;Kakamega HC&quot;</code></p>
 
 <ul>
-<li><code>uuid</code> - globally unique <a href='http://en.wikipedia.org/wiki/Universally_unique_identifier'>UUID per RFD 4122</a>. The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.</li>
+<li><code>id</code> - The internal system unique identifier. The id must be universally unique within the FRED registry.</li>
 </ul>
 
-<p><code>&quot;uuid&quot;: &quot;50e8400-e29b-41d4-a716-446655440000&quot;</code></p>
+<p><code>&quot;id&quot;: &#39;0X9OCW3JMV98EYOVN32SGN4II&#39;</code></p>
+
+<p>Note: the API does not providing a specific format for IDs. That is left up to the implementation.</p>
 
 <ul>
-<li><code>href</code> - URL link to the unique ID API resource for the facility. The url of a facility MAY be structured around the uuid, a system-specific identifier or some other scheme. Clients of the facilities registry MUST use the provided url field and not attempt to calculate the URL themselves from other fields the facility has.</li>
+<li><code>url</code> - URL link to the unique ID API resource for the facility</li>
 </ul>
 
-<p>Using the same HREF should always return the same facility (if it still exists).</p>
-
-<p><code>&quot;href&quot;: &quot;http://facilityregistry.org/api/v1/facilities/53adf.json&quot;</code></p>
+<p><code>&quot;url&quot;: &quot;http://facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json&quot;</code></p>
 
 <p>FACILITY IDENTIFIERS</p>
 

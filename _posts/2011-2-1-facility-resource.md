@@ -11,8 +11,8 @@ EXAMPLE HEALTH FACILITY RESPONSE
     "facilities": [
         {
             "name": "Kakamega HC",
-            "url": "http: //facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json",
-            "id": "0X9OCW3JMV98EYOVN32SGN4II",
+            "href": "http://facilityregistry.org/api/v1/facilities/53adf.json",
+            "uuid": "550e8400-e29b-41d4-a716-446655440000",
             "active": true,
             "createdAt": "2011-11-16T14:26:15Z",
             "updatedAt": "2011-11-16T14:26:15Z",
@@ -65,15 +65,15 @@ Each facility has the following core properties:
 
 `"name": "Kakamega HC"`
 
-* `id` - The internal system unique identifier. The id must be universally unique within the FRED registry.
+* `uuid` - globally unique [UUID per RFD 4122](http://en.wikipedia.org/wiki/Universally_unique_identifier). The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.
 
-`"id": '0X9OCW3JMV98EYOVN32SGN4II'`
+`"uuid": "50e8400-e29b-41d4-a716-446655440000"`
 
-Note: the API does not providing a specific format for IDs. That is left up to the implementation.
+* `href` - URL link to the unique ID API resource for the facility.  The url of a facility MAY be structured around the uuid, a system-specific identifier or some other scheme. Clients of the facilities registry MUST use the provided url field and not attempt to calculate the URL themselves from other fields the facility has.
 
-* `url` - URL link to the unique ID API resource for the facility
+Using the same HREF should always return the same facility (if it still exists).
 
-`"url": "http://facilityregistry.org/api/v1/facilities/0X9OCW3JMV98EYOVN32SGN4II.json"`
+`"href": "http://facilityregistry.org/api/v1/facilities/53adf.json"`
 
 FACILITY IDENTIFIERS
 
