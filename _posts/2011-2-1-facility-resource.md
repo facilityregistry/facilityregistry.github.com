@@ -65,7 +65,7 @@ Each facility has the following core properties:
 
 `"name": "Kakamega HC"`
 
-* `uuid` - globally unique [UUID per RFD 4122](http://en.wikipedia.org/wiki/Universally_unique_identifier). The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.
+* `uuid` - globally unique [UUID per RFC 4122](http://en.wikipedia.org/wiki/Universally_unique_identifier). The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.
 
 `"uuid": "50e8400-e29b-41d4-a716-446655440000"`
 
