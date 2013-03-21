@@ -160,7 +160,7 @@
 <ul>
 <li>The error code is sent back as a status header,</li>
 
-<li>The body includes an object describing both the code and message (for debugging and/or display purposes),</li>
+<li>The body includes an object describing both the code and OPTIONALLY the message</li>
 </ul>
 
 <p>For example, for a call with when the resource is not found:</p>
@@ -284,7 +284,7 @@
 <p><code>&quot;name&quot;: &quot;Kakamega HC&quot;</code></p>
 
 <ul>
-<li><code>uuid</code> - globally unique <a href='http://en.wikipedia.org/wiki/Universally_unique_identifier'>UUID per RFD 4122</a>. The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.</li>
+<li><code>uuid</code> - globally unique <a href='http://en.wikipedia.org/wiki/Universally_unique_identifier'>UUID per RFC 4122</a>. The UUID for a facility should remain constant and should never be changed. eg) the URL of the facility changes.</li>
 </ul>
 
 <p><code>&quot;uuid&quot;: &quot;50e8400-e29b-41d4-a716-446655440000&quot;</code></p>
@@ -535,7 +535,7 @@
 <h3 id='request'>Request</h3>
 
 <ul>
-<li><strong>The body can&#8217;t be empty</strong> and must include at least the <code>name</code> attribute that represents the name of the facility.</li>
+<li>The <code>name</code> attribute representing the name of the facility is mandatory.</li>
 
 <li>by default <code>active</code>=true</li>
 
@@ -554,7 +554,6 @@
 Location: http://facilityregistry.org/api/v1/facilities/53adf.json</code></p>
 
 <p><code>{
-   &quot;facility&quot;: {
    &quot;name&quot;: &quot;Kakamega HC&quot;,
    ...
 }</code></p>
