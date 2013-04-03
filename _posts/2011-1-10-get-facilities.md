@@ -48,7 +48,7 @@ FILTERING FACILITIES
 * One value per instance of parameter
 * Name of a parameter must exactly match the name of the property (core or extended) on which it filters data
 * Instances of the same parameter are OR and different are AND.
-For example: ?properties.services=OBG&properties.services=ER would filter all facilities offering OBG OR ER, where as ?identifiers.id=2030&identifiers.agency=MOH would filter facilities with an identifier 2030 AND identifier assigned by MOH.
+For example: ?properties:services=OBG&properties:services=ER would filter all facilities offering OBG OR ER, where as ?identifiers:id=2030&identifiers:agency=MOH would filter facilities with an identifier 2030 AND identifier assigned by MOH.
 
 FILTER BY ACTIVE STATUS
 
