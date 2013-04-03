@@ -22,7 +22,7 @@ Get an individual facility for a particular id.
    ...
 }`
 
-Returns the [facility object](#facility-resource) matching **`{id}`**
+Returns the [facility object](#facility-resource) matching **`{id}`** including core and extended properties.
 
 ```Status: 404 Not Found```
 ```{
