@@ -21,7 +21,7 @@ Create a new facility
 
 ### Response
 
-Returns the created facility
+Returns the created facility, in the same format as a default GET of the individual facility.
 
 `Status: 201 Created
 Location: http://facilityregistry.org/api/v1/facilities/53adf.json`
