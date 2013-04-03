@@ -8,11 +8,6 @@ layout: nil
 ---
 ###Request Parameters###
 
-* `allProperties` - boolean field (default true) specifying that all the core and extended properties should be returned.
-
-`/facilities.json?allProperties={true/false}`
-
-
 SORTING
 
 * `sortAsc` - Sort ascending
